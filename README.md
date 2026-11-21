@@ -32,6 +32,12 @@ Open [http://localhost:3000](http://localhost:3000). Express serves plain HTML, 
 
 ## Code map
 
+The diagram traces a sale from the cart through validation, pricing, Khata credit checks, and storage. It also maps invoices, cancellations, settlements, and reports to the code behind them.
+
+![ShopLedger architecture diagram showing checkout, follow-up workflows, and the modules behind them](docs/shopledger-architecture.png)
+
+The invoice box predates the invoice fix. The current invoice displays the amounts saved at checkout and reconstructs line-level GST when it matches the recorded breakdown.
+
 | Path | Responsibility |
 | --- | --- |
 | [`server.js`](server.js), [`config.js`](config.js) | Express entry point, static files, printable invoices, and shop settings. |
